@@ -18,13 +18,25 @@
         document.getElementById(itemName).style.display = "block"; 
         }
     </script>
+
     <style>
         .hide-child .child {
             display: none;
         }
+    
         .hide-child:hover .child {
             display: block;
-        }    
+        }
+        @media screen and (max-width: 850px) {
+            .navmobile {
+                display: flex;
+                z-index: 2;
+            }
+    
+           .navdesktop {
+                display: none;
+           }
+        }
     </style>
     
 </head>
@@ -35,7 +47,7 @@
         <!-- Header -->
         <div class="w-100 relative">
             <!-- Navigation -->
-            <div class="w-100 ph3 absolute top-0 bg-black-30 flex items-center z-2">
+            <div class="navdesktop w-100 ph3 absolute top-0 bg-black-30 flex items-center z-2">
                 <!-- Logo -->
                 <div>
                     <a href="#"><img src="picture/logo.png" alt="Logo"
@@ -123,6 +135,28 @@
             </div>
             <!-- End Navigation -->
 
+            <!--Mobile Navigation-->
+            <div class="navmobile w-100 ph3 absolute top-0 bg-black-30 items-center justify-between">
+                <!--Left Menu-->
+                <div class="dim">
+                    <a href="#"><img src="picture/icon-menu.png" alt="Menu"></a>
+                </div>
+                <!--End Left Menu-->
+            
+                <!-- Center Logo -->
+                <div>
+                    <a href="#"><img src="picture/logo.png" alt="Logo" title="wonder.vn-Kiến trúc, Nội thất và Xây dựng"></a>
+                </div>
+                <!-- End Center Logo-->
+            
+                <!--Right Menu-->
+                <div class="dim">
+                    <a href="#"><img class="pa2 ml3 br-100  bg-light-blue" src="picture/icon-cart.png" alt="icon-cart"></a>
+                </div>
+                <!--End Right Menu-->
+            </div>
+            <!--End Mobile Navigation-->
+
             <!-- Slider -->
             <div>
                 <div class="main-content">
@@ -170,7 +204,7 @@
         <!--Content-->
         <div>
             <div class="tc">
-                <h2 class="f2 sans-serif fw7">Kiến trúc, nội thất & xây dựng</h2>
+                <h2 class="f2-ns f3 sans-serif fw7">Kiến trúc, nội thất & xây dựng</h2>
             </div>
             <div class="w-70 center black-50 tc">
                 <p class="sans-serif"> Hơn 10 năm kinh nghiệm trong ngành kiến trúc, nội thất và xây dựng,
@@ -191,8 +225,8 @@
                             <div class="aspect-ratio--object cover bg-center absolute"
                                 style="background-image:url(picture/kim-sang-ryur-wonder-thumb.jpg)">
                                 <div class="absolute bottom-1 left-0 right-0 tc ">
-                                    <h6 class="sans-serif ttu f5 fw7 white mv1">KIM SANG RYUR</h6>
-                                    <p class="sans-serif ttu f6 white-70 mv1 child">Căn hộ, penthouse </p>
+                                    <h6 class="sans-serif ttu f6 f5-ns fw7 white mv1">KIM SANG RYUR</h6>
+                                    <p class="sans-serif ttu f7 f6-ns white-70 mv1 child">Căn hộ, penthouse </p>
                                 </div>
                             </div>
                         </div>
@@ -205,8 +239,8 @@
                             <div class="aspect-ratio--object cover bg-center absolute" 
                             style="background-image:url(picture/kita-group-duplex-wonder-thumb.jpg)">
                                 <div class="absolute bottom-1 left-0 right-0 tc ">
-                                    <h6 class="sans-serif ttu f5 fw7 white mv1">KITA Group – Duplex</h6>
-                                    <p class="sans-serif ttu f6 white-70 mv1 child">Căn hộ, penthouse </p>
+                                    <h6 class="sans-serif ttu f6 f5-ns fw7 white mv1">KITA Group – Duplex</h6>
+                                    <p class="sans-serif ttu f7 f6-ns white-70 mv1 child">Căn hộ, penthouse </p>
                                 </div>
                             </div>
                         </div>
@@ -219,8 +253,8 @@
                             <div class="aspect-ratio--object cover bg-center absolute" 
                             style="background-image:url(picture/kita-group-can-88m-wonder-thumb.jpg)">
                                 <div class="absolute bottom-1 left-0 right-0 tc ">
-                                    <h6 class="sans-serif ttu f5 fw7 white mv1">KITA Group</h6>
-                                    <p class="sans-serif ttu f6 white-70 mv1 child">Căn hộ, penthouse </p>
+                                    <h6 class="sans-serif ttu f6 f5-ns fw7 white mv1">KITA Group</h6>
+                                    <p class="sans-serif ttu f7 f6-ns white-70 mv1 child">Căn hộ, penthouse </p>
                                 </div>
                             </div>
                         </div>
@@ -233,8 +267,8 @@
                             <div class="aspect-ratio--object cover bg-center absolute" 
                             style="background-image:url(picture/kita-group-2-wonder-thumb.jpg)">
                                 <div class="absolute bottom-1 left-0 right-0 tc">
-                                    <h6 class="sans-serif ttu f5 fw7 white mv1">KITA Group</h6>
-                                    <p class="sans-serif ttu f6 white-70 mv1 child">Căn hộ, penthouse </p>
+                                    <h6 class="sans-serif ttu f6 f5-ns fw7 white mv1">KITA Group</h6>
+                                    <p class="sans-serif ttu f7 f6-ns white-70 mv1 child">Căn hộ, penthouse </p>
                                 </div>
                             </div>
                         </div>
@@ -247,8 +281,8 @@
                             <div class="aspect-ratio--object cover bg-center absolute"
                                 style="background-image:url(picture/kita-group-can-d-wonder-thumb.jpg)">
                                 <div class="absolute bottom-1 left-0 right-0 tc">
-                                    <h6 class="sans-serif ttu f5 fw7 white mv1">KITA Group</h6>
-                                    <p class="sans-serif ttu f6 white-70 mv1 child">Căn hộ, penthouse </p>
+                                    <h6 class="sans-serif ttu f6 f5-ns fw7 white mv1">KITA Group</h6>
+                                    <p class="sans-serif ttu f7 f6-ns white-70 mv1 child">Căn hộ, penthouse </p>
                                 </div>
                             </div>
                         </div>
@@ -261,8 +295,8 @@
                             <div class="aspect-ratio--object cover bg-center absolute"
                                 style="background-image:url(picture/kita-group-penthouse-wonder-ver1-thumb.jpg)">
                                 <div class="absolute bottom-1 left-0 right-0 tc">
-                                    <h6 class="sans-serif ttu f5 fw7 white mv1">KITA Group- Penthouse 1</h6>
-                                    <p class="sans-serif ttu f6 white-70 mv1 child">Căn hộ, penthouse</p>
+                                    <h6 class="sans-serif ttu f6 f5-ns fw7 white mv1">KITA Group- Penthouse 1</h6>
+                                    <p class="sans-serif ttu f7 f6-ns white-70 mv1 child">Căn hộ, penthouse</p>
                                 </div>
                             </div>
                         </div>
@@ -275,8 +309,8 @@
                             <div class="aspect-ratio--object cover bg-center absolute"
                                 style="background-image:url(picture/thao-villa-an-phu-wonder-thumb.jpg)">
                                 <div class="absolute bottom-1 left-0 right-0 tc">
-                                    <h6 class="sans-serif ttu f5 fw7 white mv1">Thao Villa</h6>
-                                    <p class="sans-serif ttu f6 white-70 mv1 child">Biệt Thự</p>
+                                    <h6 class="sans-serif ttu f6 f5-ns fw7 white mv1">Thao Villa</h6>
+                                    <p class="sans-serif ttu f7 f6-ns white-70 mv1 child">Biệt Thự</p>
                                 </div>
                             </div>
                         </div>
@@ -289,8 +323,8 @@
                             <div class="aspect-ratio--object cover bg-center absolute"
                                 style="background-image:url(picture/karaoke-sky-wonder-thumb.jpg)">
                                 <div class="absolute bottom-1 left-0 right-0 tc">
-                                    <h6 class="sans-serif ttu f5 fw7 white mv1">Karaoke sky2</h6>
-                                    <p class="sans-serif ttu f6 white-70 mv1 child">Bar, Cafe, Nhà hàng, Karaoke</p>
+                                    <h6 class="sans-serif ttu f6 f5-ns fw7 white mv1">Karaoke sky2</h6>
+                                    <p class="sans-serif ttu f7 f6-ns white-70 mv1 child">Bar, Cafe, Nhà hàng, Karaoke</p>
                                 </div>
                             </div>
                         </div>
@@ -303,8 +337,8 @@
                             <div class="aspect-ratio--object cover bg-center absolute"
                                 style="background-image:url(picture/showroom-anh-phu-wonder-thumb-1.jpg)">
                                 <div class="absolute bottom-1 left-0 right-0 tc">
-                                    <h6 class="sans-serif ttu f5 fw7 white mv1">Showroom Crown</h6>
-                                    <p class="sans-serif ttu f6 white-70 mv1 child">Showroom, shop, building, office</p>
+                                    <h6 class="sans-serif ttu f6 f5-ns fw7 white mv1">Showroom Crown</h6>
+                                    <p class="sans-serif ttu f7 f6-ns white-70 mv1 child">Showroom, shop, building, office</p>
                                 </div>
                             </div>
                         </div>
@@ -317,8 +351,8 @@
                             <div class="aspect-ratio--object cover bg-center absolute"
                                 style="background-image:url(picture/chi-phuong-wonder-thumb-1.jpg)">
                                 <div class="absolute bottom-1 left-0 right-0 tc">
-                                    <h6 class="sans-serif ttu f5 fw7 white mv1">Nguyễn ngọc nam phương</h6>
-                                    <p class="sans-serif ttu f6 white-70 mv1 child">Căn hộ, penthouse</p>
+                                    <h6 class="sans-serif ttu f6 f5-ns fw7 white mv1">Nguyễn ngọc nam phương</h6>
+                                    <p class="sans-serif ttu f7 f6-ns white-70 mv1 child">Căn hộ, penthouse</p>
                                 </div>
                             </div>
                         </div>
@@ -331,8 +365,8 @@
                             <div class="aspect-ratio--object cover bg-center absolute"
                                 style="background-image:url(picture/lakeview-wonder-thumb-1.jpg)">
                                 <div class="absolute bottom-1 left-0 right-0 tc">
-                                    <h6 class="sans-serif ttu f5 fw7 white mv1">Trịnh quốc mai khôi</h6>
-                                    <p class="sans-serif ttu f6 white-70 mv1 child">Ảnh thực tế sau thi công</p>
+                                    <h6 class="sans-serif ttu f6 f5-ns fw7 white mv1">Trịnh quốc mai khôi</h6>
+                                    <p class="sans-serif ttu f7 f6-ns white-70 mv1 child">Ảnh thực tế sau thi công</p>
                                 </div>
                             </div>
                         </div>
@@ -345,8 +379,8 @@
                             <div class="aspect-ratio--object cover bg-center absolute"
                                 style="background-image:url(picture/diamond-lotus-wonder-1.jpg)">
                                 <div class="absolute bottom-1 left-0 right-0 tc">
-                                    <h6 class="sans-serif ttu f5 fw7 white mv1">Đào thành phát</h6>
-                                    <p class="sans-serif ttu f6 white-70 mv1 child">Ảnh thực tế sau thi công</p>
+                                    <h6 class="sans-serif ttu f6 f5-ns fw7 white mv1">Đào thành phát</h6>
+                                    <p class="sans-serif ttu f7 f6-ns white-70 mv1 child">Ảnh thực tế sau thi công</p>
                                 </div>
                             </div>
                         </div>
@@ -388,7 +422,7 @@
                                 <div class="pv2 bg-black-05 bb b--light-silver">
                                     <b class="f3 ">Trọn gói đ/m<sup>2</sup></b>
                                 </div>
-                                <div class="f1 fw7 blue pt2 pb1">299,000</div>
+                                <div class="f1-ns f2 f2-m fw7 blue pt2 pb1">299,000</div>
                             </div>
                             <div class="tc ph4 pb3">
                                 <div class="bb b--light-silver pv2">
@@ -423,7 +457,7 @@
                                 <div class="pv2 bg-black-05 bb b--light-silver">
                                     <b class="f3 ">Kiến trúc đ/m<sup>2</sup></b>
                                 </div>
-                                <div class="f1 fw7 blue pt2 pb1">199,000</div>
+                                <div class="f1-ns f2 f2-m fw7 blue pt2 pb1">199,000</div>
                             </div>
                             <div class="tc ph4 pb3">
                                 <div class="bb b--light-silver pv2">
@@ -458,7 +492,7 @@
                                 <div class="pv2 bg-black-05 bb b--light-silver">
                                     <b class="f3 ">Nội thất đ/m<sup>2</sup></b>
                                 </div>
-                                <div class="f1 fw7 blue pt2 pb1">199,000</div>
+                                <div class="f1-ns f2 f2-m fw7 blue pt2 pb1">199,000</div>
                             </div>
                             <div class="tc ph4 pb3">
                                 <div class="bb b--light-silver pv2">
@@ -493,7 +527,7 @@
                                 <div class="pv2 bg-blue bb b--light-silver">
                                     <b class="f3">Free thiết kế</b>
                                 </div>
-                                <div class="f1 fw7 pt2 pb1 bg-light-blue">Free</div>
+                                <div class="f1-ns f2 f2-m fw7 pt2 pb1 bg-light-blue">Free</div>
                             </div>
                             <div class="tc ph4 pb3 bg-light-blue">
                                 <div class="bb b--light-silver pv2">
