@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
-    <title>Wonder.vn</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css" 
+        integrity="sha384-QokYePQSOwpBDuhlHOsX0ymF6R/vLk/UQVz3WHa6wygxI5oGTmDTv8wahFOSspdm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css" 
+        integrity="sha384-vd1e11sR28tEK9YANUtpIOdjGW14pS87bUBuOIoBILVWLFnS+MCX9T6MMf0VdPGq" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="picture/icon.png" >
+    <title>Wonder.vn - Kiến trúc, Nội thất và Xây dựng</title>
     <script>
 
         function openItem(itemName) {
@@ -42,6 +47,7 @@
 			}
 			else { //Open
 				document.getElementById('SideBar').style.display = "block";
+                document.getElementById('SideBar').style.position = "fixed";
 				document.getElementById('SideBar').style.zIndex = 999;
                 document.body.style.overflow = 'hidden';
 			}
@@ -75,157 +81,166 @@
     
 </head>
 
-<body>
-    <!--Wrapper-->
-    <div class="w-100 sans-serif">
-        <!--SideBar-->
-        <div id="SideBar" class="dn absolute bg-black-70 w-100 vh-100">
-            <!--Button Close-->
-            <div class="fixed right-0 top-0 dib">
-                <button class="input-reset bg-transparent bn dim" onclick="sideBar_OpenClose()" title="Close (ESC)">
-                    <img src="picture/icon-close4848.png" alt="icon-close"></button>
-            </div>
-            <!--Nav Mobile-->
-            <div class="db overflow-y-auto top-0 bottom-0 left-0 w5 fixed bg-near-white shadow-5 lh-copy">
-                <div class="pv3 fw7 f5 tl">
-                    <ul class="list pl0">
-                        <li class="pa3">
-                            <div class="flex">
-                                <input class="pa1 w-80" type="search" name="search" placeholder="Search....">
-                                <button class="pa1 bn w-20 bg-orange input-reset dim pointer" type="submit"><img
-                                        src="picture/icon-search.png" alt="icon-search"></button>
-                            </div>
-                        </li>
-                        <li
-                            class="pointer bb bt b--black-10 pa3 hover-bg-black-10 flex flex-row flex-wrap items-center justify-between">
-                            <a class="link black-60 hover-black" href="#">Dự án</a>
-                            <button class="input-reset bg-transparent bn"
-                                onclick="subSB_OpenClose('subSideBarDuAn','iconDuAn')"><img id="iconDuAn"
-                                    src="picture/icon-angle-down2424.png"></button>
-                            <ul id="subSideBarDuAn" class="dn pl2 list black-60 pb3">
-                                <li class="mt3 mb3">
-                                    <a class="f6 link black ttu pv1" href="#">Dự án</a>
-                                    <ul class="pl2 list fw5">
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Ảnh thực tế sau thi
-                                                công</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Căn hộ, penthouse</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Biệt thự</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Nhà phố</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Bar, cafe, nhà hàng,
-                                                karaoke</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Khách sạn,resort</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Spa, beauty salon</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Showrom, shop, building,
-                                                office</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Concept</a></li>
-                                    </ul>
-                                </li>
-                                <li class="">
-                                    <a class="f6 link black ttu" href="#">Thư viện</a>
-                                    <ul class="pl2 list fw5">
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Phòng khách</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Bếp, phòng ăn</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Phòng ngủ</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Phòng trẻ em</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Góc đẹp</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="pointer bb b--black-10 pa3 hover-bg-black-10 flex flex-row">
-                            <a class="link black-60" href="#giathietke">Bảng giá</a>
-                        </li>
-                        <li
-                            class="pointer bb b--black-10 pa3 hover-bg-black-10 flex flex-row flex-wrap items-center justify-between">
-                            <a class="link black-60" href="#">Dịch vụ</a>
-                            <button class="input-reset bn bg-transparent"
-                                onclick="subSB_OpenClose('subSideBarDichVu','iconDichVu')"><img id="iconDichVu"
-                                    src="picture/icon-angle-down2424.png" alt=""></button>
-                            <ul id="subSideBarDichVu" class="dn pl2 list black-60 pb3">
-                                <li class="mt3 mb3">
-                                    <a class="f6 link black ttu pv1" href="#">Bộ sưu tập</a>
-                                    <ul class="pl2 list fw5">
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Đương đại</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Scandinavian</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Industrial</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Bán cổ điểm</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Cổ điển</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Indochine</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Tối giản</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Bar, cafe</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Gỗ tự nhiên</a></li>
-                                    </ul>
-                                </li>
-                                <li class="">
-                                    <a class="f6 link black ttu" href="#">Xây dựng</a>
-                                    <ul class="pl2 list fw5">
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Xây dựng phần thô</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Thi công cọc</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Vận chuyển đất đi đổ</a>
-                                        </li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Hệ tường vây cừ Larsen</a>
-                                        </li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Thuê hệ Shoring</a></li>
-                                    </ul>
-                                </li>
-                                <li class="">
-                                    <a class="f6 link black ttu" href="#">Nội thất</a>
-                                    <ul class="pl2 list fw5">
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Hot products</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Sofas</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Armchairs</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Ghế</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Bàn</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Giường</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Cabinet, kệ TV</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Tủ quần áo</a></li>
-                                        <li class="pv2"><a class="link black-60 hover-black" href="#">Bếp</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li
-                            class="pointer bb b--black-10 pa3 hover-bg-black-10 flex flex-row flex-wrap items-center justify-between">
-                            <a class="link black-60" href="#">Phong thủy</a>
-                            <button class="input-reset bn bg-transparent"
-                                onclick="subSB_OpenClose('subSideBarPhongThuy','iconPhongThuy')"><img id="iconPhongThuy"
-                                    src="picture/icon-angle-down2424.png" alt=""></button>
-                            <ul id="subSideBarPhongThuy" class="dn pl2 list black-60 pb3 fw5">
-                                <li class="pv2">
-                                    <a class="link black-60" href="#">Xem phong thủy</a>
-                                </li>
-                                <li class="pv2">
-                                    <a class="link black-60" href="#">Thước lỗ ban</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li
-                            class="pointer bb b--black-10 pa3 hover-bg-black-10 flex flex-row flex-wrap items-center justify-between">
-                            <a class="link black-60" href="#">Giới thiệu</a>
-                            <button class="input-reset bn bg-transparent"
-                                onclick="subSB_OpenClose('subSideBarGioiThieu','iconGioiThieu')"><img id="iconGioiThieu"
-                                    src="picture/icon-angle-down2424.png" alt=""></button>
-                            <ul id="subSideBarGioiThieu" class="dn pl2 list black-60 pb3 fw5">
-                                <li class="pv2">
-                                    <a class="link black-60" href="#">Nội quy công ty</a>
-                                </li>
-                                <li class="pv2">
-                                    <a class="link black-60" href="#">Tuyển dụng</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="pointer bb b--black-10 pa3 hover-bg-black-10">
-                            <a class="link black-60" href="#">Liên hệ</a>
-                        </li>
-                        <li class="pointer b--black-10 pa3 hover-bg-black-10">
-                            <a class="link black-60 f3" href="#">Login</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!--End Nav Mobile-->
+<body class="sans-serif">
+    <!--SideBar-->
+    <div id="SideBar" class="dn absolute bg-black-70 w-100 vh-100">
+        <!--Button Close-->
+        <div class="fixed right-0 top-0 dib">
+            <button class="input-reset bg-transparent bn dim" onclick="sideBar_OpenClose()" title="Close (ESC)">
+                <img src="picture/icon-close4848.png" alt="icon-close"></button>
         </div>
-        <!--End SideBar-->
+        <!--Nav Mobile-->
+        <div class="db overflow-y-auto top-0 bottom-0 left-0 w5 fixed bg-near-white shadow-5 lh-copy">
+            <div class="pv3 fw7 f5 tl">
+                <ul class="list pl0">
+                    <li class="pa3">
+                        <div class="flex">
+                            <input class="pa1 w-80" type="search" name="search" placeholder="Search....">
+                            <button class="pa1 bn w-20 bg-orange input-reset dim pointer" type="submit"><img
+                                    src="picture/icon-search.png" alt="icon-search"></button>
+                        </div>
+                    </li>
+                    <li
+                        class="pointer bb bt b--black-10 pa3 hover-bg-black-10 flex flex-row flex-wrap items-center justify-between">
+                        <a class="link black-60 hover-black" href="#">Dự án</a>
+                        <button class="input-reset bg-transparent bn"
+                            onclick="subSB_OpenClose('subSideBarDuAn','iconDuAn')"><img id="iconDuAn"
+                                src="picture/icon-angle-down2424.png"></button>
+                        <ul id="subSideBarDuAn" class="dn pl2 list black-60 pb3">
+                            <li class="mt3 mb3">
+                                <a class="f6 link black ttu pv1" href="#">Dự án</a>
+                                <ul class="pl2 list fw5">
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Ảnh thực tế sau thi
+                                            công</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Căn hộ, penthouse</a>
+                                    </li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Biệt thự</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Nhà phố</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Bar, cafe, nhà hàng,
+                                            karaoke</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Khách sạn,resort</a>
+                                    </li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Spa, beauty salon</a>
+                                    </li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Showrom, shop,
+                                            building,
+                                            office</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Concept</a></li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a class="f6 link black ttu" href="#">Thư viện</a>
+                                <ul class="pl2 list fw5">
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Phòng khách</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Bếp, phòng ăn</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Phòng ngủ</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Phòng trẻ em</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Góc đẹp</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pointer bb b--black-10 pa3 hover-bg-black-10 flex flex-row">
+                        <a class="link black-60" href="#giathietke">Bảng giá</a>
+                    </li>
+                    <li
+                        class="pointer bb b--black-10 pa3 hover-bg-black-10 flex flex-row flex-wrap items-center justify-between">
+                        <a class="link black-60" href="#">Dịch vụ</a>
+                        <button class="input-reset bn bg-transparent"
+                            onclick="subSB_OpenClose('subSideBarDichVu','iconDichVu')"><img id="iconDichVu"
+                                src="picture/icon-angle-down2424.png" alt=""></button>
+                        <ul id="subSideBarDichVu" class="dn pl2 list black-60 pb3">
+                            <li class="mt3 mb3">
+                                <a class="f6 link black ttu pv1" href="#">Bộ sưu tập</a>
+                                <ul class="pl2 list fw5">
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Đương đại</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Scandinavian</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Industrial</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Bán cổ điểm</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Cổ điển</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Indochine</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Tối giản</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Bar, cafe</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Gỗ tự nhiên</a></li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a class="f6 link black ttu" href="#">Xây dựng</a>
+                                <ul class="pl2 list fw5">
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Xây dựng phần thô</a>
+                                    </li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Thi công cọc</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Vận chuyển đất đi
+                                            đổ</a>
+                                    </li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Hệ tường vây cừ
+                                            Larsen</a>
+                                    </li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Thuê hệ Shoring</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a class="f6 link black ttu" href="#">Nội thất</a>
+                                <ul class="pl2 list fw5">
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Hot products</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Sofas</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Armchairs</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Ghế</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Bàn</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Giường</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Cabinet, kệ TV</a>
+                                    </li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Tủ quần áo</a></li>
+                                    <li class="pv2"><a class="link black-60 hover-black" href="#">Bếp</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li
+                        class="pointer bb b--black-10 pa3 hover-bg-black-10 flex flex-row flex-wrap items-center justify-between">
+                        <a class="link black-60" href="#">Phong thủy</a>
+                        <button class="input-reset bn bg-transparent"
+                            onclick="subSB_OpenClose('subSideBarPhongThuy','iconPhongThuy')"><img id="iconPhongThuy"
+                                src="picture/icon-angle-down2424.png" alt=""></button>
+                        <ul id="subSideBarPhongThuy" class="dn pl2 list black-60 pb3 fw5">
+                            <li class="pv2">
+                                <a class="link black-60" href="#">Xem phong thủy</a>
+                            </li>
+                            <li class="pv2">
+                                <a class="link black-60" href="#">Thước lỗ ban</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li
+                        class="pointer bb b--black-10 pa3 hover-bg-black-10 flex flex-row flex-wrap items-center justify-between">
+                        <a class="link black-60" href="#">Giới thiệu</a>
+                        <button class="input-reset bn bg-transparent"
+                            onclick="subSB_OpenClose('subSideBarGioiThieu','iconGioiThieu')"><img id="iconGioiThieu"
+                                src="picture/icon-angle-down2424.png" alt=""></button>
+                        <ul id="subSideBarGioiThieu" class="dn pl2 list black-60 pb3 fw5">
+                            <li class="pv2">
+                                <a class="link black-60" href="#">Nội quy công ty</a>
+                            </li>
+                            <li class="pv2">
+                                <a class="link black-60" href="#">Tuyển dụng</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pointer bb b--black-10 pa3 hover-bg-black-10">
+                        <a class="link black-60" href="#contact">Liên hệ</a>
+                    </li>
+                    <li class="pointer b--black-10 pa3 hover-bg-black-10">
+                        <a class="link black-60 f3" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--End Nav Mobile-->
+    </div>
+    <!--End SideBar-->
+    <!--Wrapper-->
+    <div class="w-100">
         <!-- Header -->
         <div class="w-100 relative">
             <!-- Navigation -->
@@ -294,7 +309,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="#" class="link white-70 hover-white mh2 b">Bảng giá</a>
+                            <a href="#giathietke" class="link white-70 hover-white mh2 b">Bảng giá</a>
                         </li>
                         <li class="hide-child relative">
                             <a href="#" class="link white-70 hover-white mh2 white-70">Dịch vụ</a>
@@ -539,7 +554,7 @@
                         </li>
                         <li class="hide-child relative">
                             <a href="#" class="ml1">
-                                <img src="picture/icon-search.png" alt="icon-search">
+                                <i class="fas fa-search white-70" style="font-size:15px;"></i>
                             </a>
                             <ul class="list mt2 child absolute bg-black-50 pa3 w5">
                                 <li>
@@ -547,7 +562,7 @@
                                         <input class="pa2 bn w-80 fl input-reset" type="search" name="search"
                                             placeholder="Search....">
                                         <button class="pa2 bn w-20 bg-orange fl button-reset dim pointer"
-                                            type="submit"><img src="picture/icon-search.png" alt="icon-search"></button>
+                                            type="submit"><i class="fas fa-search white-70" style="font-size:15px;"></i></button>
                                     </div>
                                 </li>
                             </ul>
@@ -559,14 +574,18 @@
 
                 <!--Right Menu-->
                 <div class="ml-auto nt2">
-                    <ul class="hide-child relative list flex">
+                    <ul class="relative list flex">
                         <li>
-                            <a href="#"><img class="pv2 ph3  br b--gray dim" src="picture/icon-user.png"
-                                    alt="icon-user"></a>
+                            <a href="#">
+                                <i class="fas fa-user dim pa2 mr3 white-70" style="font-size:20px;"></i>
+                            </a>
                         </li>
-                        <li>
-                            <a href="#"><img class="pa2 ml3 br-100  bg-light-blue dim"
-                                    src="picture/icon-cart.png" alt="icon-cart"></a>
+                        <li class="br b--white-20"></li>
+                        <li class="hide-child">
+                            <a href="#"><i class="fas fa-shopping-cart dim pa2 ml3 bg-navy br-100 white-70"
+                                    style="font-size:20px;"></i>
+                
+                            </a>
                             <ul class="list child absolute w5 pa3 right-0 bg-black-50">
                                 <li>
                                     <p class="f4 white">No products in the cart.</p>
@@ -1105,7 +1124,7 @@
         <!--End Tabbed Content-->
 
         <!--Footer-->
-        <div class="lh-copy">
+        <div id="contact"  class="lh-copy">
             <div class="bg-dark-gray">
                 <div class="cf white ph2-ns bg-dark-gray w-80 center">
                     <div class="fl w-100 w-50-ns pa2 ">
@@ -1132,7 +1151,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="fl w-100 w-50-ns pa2 ">
+                    <div class="fl w-100 w-50-ns pa2">
                         <div class="ph2-ns measure-wide">
                             <h2>Liên hệ</h2>
                             <strong class="ttu">Hồ Chí Minh</strong>
